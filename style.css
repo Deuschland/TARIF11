@@ -56,12 +56,6 @@ body {
   color: white;
 }
 
-#sub-options .icon-button {
-  font-size: 1.2rem; /* або 18px */
-  font-weight: 600;
-}
-
-
 .vertical-table {
   font-size: 1.1em; /* збільшено */
   margin: 0 auto 30px auto;
@@ -98,14 +92,6 @@ body {
   color: #e91e63;
 }
 
-#sub-options {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  padding: 10px;
-  justify-content: center;
-}
-
 #reset-container {
   position: fixed;
   bottom: 20px;
@@ -126,6 +112,27 @@ body {
   font-size: 1em;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#sub-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 12px;
+  padding: 10px;
+}
+
+#sub-options .icon-button {
+  font-size: clamp(1rem, 2.5vw, 1.4rem);
+  font-weight: 600;
+  padding: 0.8em 1em;
+  border-radius: 12px;
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transition: transform 0.1s ease, box-shadow 0.2s ease;
+  width: 100%;
+  text-align: center;
 }
 
 #reset-button:hover {
