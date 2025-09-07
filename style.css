@@ -20,8 +20,32 @@ body {
 #other-buttons {
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 12px;
+  padding: 10px;
+}
+
+#other-buttons .icon-button {
+  width: 100%;
+  font-size: clamp(1.1rem, 3vw, 1.5rem);
+  font-weight: 600;
+  padding: 1em;
+  border-radius: 12px;
+  background-color: #005fa3;
+  color: white;
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  transition: transform 0.1s ease, box-shadow 0.2s ease;
+}
+
+#other-buttons .icon-button:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+  transform: translateY(-2px);
+}
+
+#other-buttons .icon-button:active {
+  transform: scale(0.98);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
 .icon-button {
