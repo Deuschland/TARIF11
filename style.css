@@ -1,24 +1,12 @@
-:root {
-  --primary-blue: #0077cc;
-  --secondary-blue: #005fa3;
-  --highlight-pink: #f48fb1;
-  --highlight-orange: #ff9800;
-  --highlight-red: #e91e63;
-  --success-green: #4CAF50;
-  --text-dark: #333;
-  --bg-light: #fdfdfd;
-}
-
 body {
   font-family: sans-serif;
-  background-color: var(--bg-light);
-  color: var(--text-dark);
+  background-color: #fdfdfd;
+  color: #333;
   text-align: center;
   padding: 20px;
   margin: 0;
 }
 
-/* Контейнери */
 #top-button {
   display: flex;
   justify-content: center;
@@ -30,26 +18,46 @@ body {
   margin-bottom: 20px;
 }
 
-#other-buttons,
-#sub-options {
+#other-buttons {
   display: flex;
   flex-direction: column;
   gap: 12px;
   padding: 10px;
 }
 
-/* Базовий стиль кнопок */
-.icon-button {
+#other-buttons .icon-button {
   width: 100%;
   font-size: clamp(1.1rem, 3vw, 1.5rem);
   font-weight: 600;
   padding: 1em;
   border-radius: 12px;
-  background-color: var(--primary-blue);
+  background-color: #005fa3;
   color: white;
   border: none;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
   text-align: center;
+  transition: transform 0.1s ease, box-shadow 0.2s ease;
+}
+
+#other-buttons .icon-button:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+  transform: translateY(-2px);
+}
+
+#other-buttons .icon-button:active {
+  transform: scale(0.98);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.icon-button {
+  font-size: clamp(1rem, 2.5vw, 1.4rem); /* адаптивний розмір шрифту */
+  font-weight: 600;
+  padding: 0.6em 1.2em;
+  border-radius: 12px;
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
   transition: transform 0.1s ease, box-shadow 0.2s ease;
   cursor: pointer;
 }
@@ -62,34 +70,23 @@ body {
 .icon-button:active {
   transform: scale(0.98);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-}
-
-/* Варіації кнопок */
-#other-buttons .icon-button {
-  background-color: var(--secondary-blue);
-}
+}  
 
 .icon-button.selected {
-  background-color: var(--highlight-orange);
+  background-color: #ff9800;
 }
 
 .icon-button.sub-selected {
   background-color: #f48fb1; /* рожевий */
+  color: white;
 }
 
-
-.value.highlight {
-  font-size: 1.4em;
-  color: var(--highlight-red);
-}
-
-/* Таблиця */
 .vertical-table {
-  font-size: 1.1em;
-  margin: 0 auto 30px;
+  font-size: 1.1em; /* збільшено */
+  margin: 0 auto 30px auto;
   max-width: 500px;
   text-align: left;
-  background-color: #fff;
+  background-color: #ffffff;
   border: 1px solid #ccc;
   padding: 20px;
   box-shadow: 0 0 10px rgba(0,0,0,0.05);
@@ -105,16 +102,21 @@ body {
 
 .label {
   font-weight: bold;
-  color: #000;
+  color: #000000;
+  text-align: left;
 }
 
 .value {
   font-weight: bold;
-  color: var(--primary-blue);
+  color: #0077cc;
   text-align: right;
 }
 
-/* Кнопка скидання */
+.value.highlight {
+  font-size: 1.4em;
+  color: #e91e63;
+}
+
 #reset-container {
   position: fixed;
   bottom: 20px;
@@ -126,7 +128,7 @@ body {
 }
 
 #reset-button {
-  background-color: var(--success-green);
+  background-color: #4CAF50;
   color: white;
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
   border: none;
@@ -135,6 +137,37 @@ body {
   font-size: 1em;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#sub-options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 10px;
+}
+
+#sub-options .icon-button {
+  width: 100%;
+  font-size: clamp(1.1rem, 3vw, 1.5rem);
+  font-weight: 600;
+  padding: 1em;
+  border-radius: 12px;
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  transition: transform 0.1s ease, box-shadow 0.2s ease;
+}
+
+#sub-options .icon-button:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+  transform: translateY(-2px);
+}
+
+#sub-options .icon-button:active {
+  transform: scale(0.98);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
 #reset-button:hover {
@@ -146,7 +179,6 @@ body {
   transform: scale(0.95);
 }
 
-/* Анімація */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -157,5 +189,3 @@ body {
     transform: translateX(-50%) translateY(0);
   }
 }
-
-
