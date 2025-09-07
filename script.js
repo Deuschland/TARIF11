@@ -103,65 +103,33 @@ const categories = {
       "Zusatztext für Rechnung": ""
     }
   },
-  "KH - KONSTANZ": {
+  "KRANKENHAUS": {
     icon: "fa-hospital-user",
     data: {
       "Name": "",
-      "Kostenträger-Nr.": "1203",
-      "Kostenträger - Name / Ort": "KH - KONSTANZ",
-      "Von Objekt / Ort": "ZNA MED KONSTANZ",
-      "Nach Objekt / Ort": "ZNA MED SINGEN",
-      "Statistik": "21",
-      "Zusatzfeld": "",
-      "Tarif": "9101",
-      "Zusatztext für Rechnung": ""
-    }
-  },
-  "KH - SINGEN": {
-    icon: "fa-hospital-symbol",
-    data: {
-      "Name": "",
-      "Kostenträger-Nr.": "3214",
-      "Kostenträger - Name / Ort": "KH - SINGEN",
-      "Von Objekt / Ort": "ZNA MED SINGEN",
-      "Nach Objekt / Ort": "ZNA MED KONSTANZ",
-      "Statistik": "21",
-      "Zusatzfeld": "",
-      "Tarif": "9201",
-      "Zusatztext für Rechnung": ""
-    }
-  },
-  
-   "KH - STOCKACH": {
-    icon: "fa-user-md",
-    data: {
-      "Name": "",
-      "Kostenträger-Nr.": "3151",
-      "Kostenträger - Name / Ort": "KH - STOCKACH",
-      "Von Objekt / Ort": "ZNA MED STOCKACH",
-      "Nach Objekt / Ort": "ZNA MED KONSTANZ",
+      "Kostenträger-Nr.": "",
+      "Kostenträger - Name / Ort": "",
+      "Von Objekt / Ort": "",
+      "Nach Objekt / Ort": "",
       "Statistik": "",
       "Zusatzfeld": "",
-      "Tarif": "9301",
+      "Tarif": "",
       "Zusatztext für Rechnung": ""
-    }
+    },	
+    subOptions: [
+      { label: "KH - KONSTANZ", "Kostenträger - Name / Ort": "KH - KONSTANZ", "Von Objekt / Ort": "ZNA MED KONSTANZ", "Nach Objekt / Ort": "ZNA MED SINGEN", "Statistik": "21", "Kostenträger-Nr.": "1203", Tarif: "9101"},
+	  
+	  { label: "DR. ZWICKER", "Kostenträger - Name / Ort": "KH - KN", "Von Objekt / Ort": "PO3", "Nach Objekt / Ort": "ZWICKER", "Statistik": "23 / 24", "Kostenträger-Nr.": "1203", Tarif: "9101" },
+	  
+     { label: "KH - SINGEN", "Kostenträger - Name / Ort": "KH - SINGEN", "Von Objekt / Ort": "ZNA MED SINGEN", "Nach Objekt / Ort": "ZNA MED KONSTANZ", "Statistik": "21", "Kostenträger-Nr.": "3214", Tarif: "9201"},
+	 
+	  { label: "KH - STOCKACH", "Kostenträger - Name / Ort": "KH - STOCKACH", "Von Objekt / Ort": "ZNA MED STOCKACH", "Nach Objekt / Ort": "ZNA MED KONSTANZ", "Statistik": "21", "Kostenträger-Nr.": "3151", Tarif: "9301" } 	    
+    ]	
   },
   
-  "DR. ZWICKER": {
-    icon: "fa-user-md",
-    data: {
-      "Name": "",
-      "Kostenträger-Nr.": "1203",
-      "Kostenträger - Name / Ort": "KH KN",
-      "Von Objekt / Ort": "P03",
-      "Nach Objekt / Ort": "ZWICKER",
-      "Statistik": "23 / 24",
-      "Zusatzfeld": "",
-      "Tarif": "9101",
-      "Zusatztext für Rechnung": ""
-    }
-  },
-  
+  //  icon: "fa-hospital-symbol",
+   // icon: "fa-user-md",    
+    
   "HEGAU JUGENDWERK": {
     icon: "fa-user-md",
     data: {
@@ -191,13 +159,13 @@ const categories = {
       "Zusatztext für Rechnung": ""
     },
     subOptions: [
-      { label: "DAK", "Kostenträger - Name / Ort": "DAK","Kostenträger-Nr.": "600", Tarif: "7611" },
-      { label: "TK", "Kostenträger - Name / Ort": "TK","Kostenträger-Nr.": "163", Tarif: "7611" },
-	  { label: "BEK", "Kostenträger - Name / Ort": "BEK","Kostenträger-Nr.": "748", Tarif: "7611" },
-	  { label: "KKH", "Kostenträger - Name / Ort": "KKH","Kostenträger-Nr.": "590", Tarif: "7611" },
-	  { label: "hkk", "Kostenträger - Name / Ort": "hkk","Kostenträger-Nr.": "1602", Tarif: "7611" },
-	  { label: "HEK", "Kostenträger - Name / Ort": "HEK","Kostenträger-Nr.": "175", Tarif: "7611" },
-      { label: "IKK", "Kostenträger - Name / Ort": "IKK","Kostenträger-Nr.": "1770", Tarif: "7621" }
+      { label: "DAK", "Kostenträger - Name / Ort": "DAK", "Kostenträger-Nr.": "600", Tarif: "7611" },
+      { label: "TK", "Kostenträger - Name / Ort": "TK", "Kostenträger-Nr.": "163", Tarif: "7611" },
+	  { label: "BEK", "Kostenträger - Name / Ort": "BEK", "Kostenträger-Nr.": "748", Tarif: "7611" },
+	  { label: "KKH", "Kostenträger - Name / Ort": "KKH", "Kostenträger-Nr.": "590", Tarif: "7611" },
+	  { label: "hkk", "Kostenträger - Name / Ort": "hkk", "Kostenträger-Nr.": "1602", Tarif: "7611" },
+	  { label: "HEK", "Kostenträger - Name / Ort": "HEK", "Kostenträger-Nr.": "175", Tarif: "7611" },
+      { label: "IKK", "Kostenträger - Name / Ort": "IKK", "Kostenträger-Nr.": "1770", Tarif: "7621" }
     ]
   }
 };

@@ -81,6 +81,12 @@ body {
   color: white;
 }
 
+#sub-options .icon-button.sub-selected {
+  background-color: #f48fb1;
+  color: white;
+}
+
+
 .vertical-table {
   font-size: 1.1em; /* збільшено */
   margin: 0 auto 30px auto;
