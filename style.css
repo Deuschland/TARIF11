@@ -59,6 +59,12 @@ body {
   color: white;
 }
 
+#sub-options .icon-button {
+  font-size: 1.2rem; /* або 18px */
+  font-weight: 600;
+}
+
+
 .vertical-table {
   font-size: 1.1em; /* збільшено */
   margin: 0 auto 30px auto;
