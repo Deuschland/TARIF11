@@ -14,7 +14,7 @@ body {
   background-color: var(--bg-light);
   color: var(--text-dark);
   text-align: center;
-  padding: 0px;
+  padding: 20px;
   margin: 0;
 }
 
@@ -157,4 +157,5 @@ body {
     transform: translateX(-50%) translateY(0);
   }
 }
+
 
