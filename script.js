@@ -14,9 +14,9 @@ const categories = {
       "Zusatztext für Rechnung": ""
     },
     subOptions: [
-      { label: "3 - Tragestuhl", tarif: "9211" },
-      { label: "4 - gehfähig", tarif: "9111" },
-      { label: "5 - Rollstuhl", tarif: "9711" }
+      { label: "3 - Tragestuhl", Tarif: "9211" },
+      { label: "4 - gehfähig", Tarif: "9111" },
+      { label: "5 - Rollstuhl", Tarif: "9711" }
     ]
   },
   "PRIVAT": {
@@ -71,7 +71,7 @@ const categories = {
       "Nach Objekt / Ort": "",
       "Statistik": "",
       "Zusatzfeld": "",
-      "Tarif": "9201",
+      "Tarif": "9301",
       "Zusatztext für Rechnung": ""
     }
   },
@@ -113,7 +113,7 @@ const categories = {
       "Nach Objekt / Ort": "ZNA MED SINGEN",
       "Statistik": "21",
       "Zusatzfeld": "",
-      "Tarif": "9201",
+      "Tarif": "9101",
       "Zusatztext für Rechnung": ""
     }
   },
@@ -130,6 +130,75 @@ const categories = {
       "Tarif": "9201",
       "Zusatztext für Rechnung": ""
     }
+  },
+  
+   "KH - STOCKACH": {
+    icon: "fa-user-md",
+    data: {
+      "Name": "",
+      "Kostenträger-Nr.": "3151",
+      "Kostenträger - Name / Ort": "KH - STOCKACH",
+      "Von Objekt / Ort": "ZNA MED STOCKACH",
+      "Nach Objekt / Ort": "ZNA MED KONSTANZ",
+      "Statistik": "",
+      "Zusatzfeld": "",
+      "Tarif": "9301",
+      "Zusatztext für Rechnung": ""
+    }
+  },
+  
+  "DR. ZWICKER": {
+    icon: "fa-user-md",
+    data: {
+      "Name": "",
+      "Kostenträger-Nr.": "1203",
+      "Kostenträger - Name / Ort": "KH KN",
+      "Von Objekt / Ort": "P03",
+      "Nach Objekt / Ort": "ZWICKER",
+      "Statistik": "23 / 24",
+      "Zusatzfeld": "",
+      "Tarif": "9101",
+      "Zusatztext für Rechnung": ""
+    }
+  },
+  
+  "HEGAU JUGENDWERK": {
+    icon: "fa-user-md",
+    data: {
+      "Name": "",
+      "Kostenträger-Nr.": "3472",
+      "Kostenträger - Name / Ort": "",
+      "Von Objekt / Ort": "",
+      "Nach Objekt / Ort": "",
+      "Statistik": "",
+      "Zusatzfeld": "",
+      "Tarif": "9201",
+      "Zusatztext für Rechnung": ""
+    }
+  },
+  
+   "Tarife für Rollstuhlfahrten": {
+    icon: "fa-notes-medical",
+    data: {
+      "Name": "",
+      "Kostenträger-Nr.": "",
+      "Kostenträger - Name / Ort": "",
+      "Von Objekt / Ort": "",
+      "Nach Objekt / Ort": "",
+      "Statistik": "",
+      "Zusatzfeld": "",
+      "Tarif": "",
+      "Zusatztext für Rechnung": ""
+    },
+    subOptions: [
+      { label: "DAK", "Kostenträger - Name / Ort": "DAK","Kostenträger-Nr.": "600", Tarif: "7611" },
+      { label: "TK", "Kostenträger - Name / Ort": "TK","Kostenträger-Nr.": "163", Tarif: "7611" },
+	  { label: "BEK", "Kostenträger - Name / Ort": "BEK","Kostenträger-Nr.": "748", Tarif: "7611" },
+	  { label: "KKH", "Kostenträger - Name / Ort": "KKH","Kostenträger-Nr.": "590", Tarif: "7611" },
+	  { label: "hkk", "Kostenträger - Name / Ort": "hkk","Kostenträger-Nr.": "1602", Tarif: "7611" },
+	  { label: "HEK", "Kostenträger - Name / Ort": "HEK","Kostenträger-Nr.": "175", Tarif: "7611" },
+      { label: "IKK", "Kostenträger - Name / Ort": "IKK","Kostenträger-Nr.": "1770", Tarif: "7621" }
+    ]
   }
 };
 
@@ -180,7 +249,7 @@ function renderView(name) {
 function renderSubSelection(option, baseData) {
   subOptions.innerHTML = "";
   subOptions.appendChild(createButton(option.label, null, null, "sub-selected"));
-  renderTable({ ...baseData, "Tarif": option.tarif });
+  renderTable({ ...baseData, ...option });
 }
 
 // Рендер таблиці
