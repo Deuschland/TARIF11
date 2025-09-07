@@ -74,8 +74,9 @@ body {
 }
 
 .icon-button.sub-selected {
-  background-color: var(--highlight-pink);
+  background-color: #f48fb1; /* рожевий */
 }
+
 
 .value.highlight {
   font-size: 1.4em;
